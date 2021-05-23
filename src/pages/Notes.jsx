@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import Grid from '@material-ui/core/Grid'
-import Paper from '@material-ui/core/Paper'
 import Container from '@material-ui/core/Container'
 import Card from '../components/Card'
+import Masonry from 'react-masonry-css'
 
 
 const Notes = () => {
@@ -15,24 +14,37 @@ const Notes = () => {
     .then(data => setNotes(data))
   },[])
 
+
+  // Delete a particular task
   const handleDelete = async(id) => {
     await fetch('http://localhost:3004/notes/'+id,{
       method: 'DELETE'
     })
-    const newNotes = notes.filter(note => note.id != id)
+
+    const newNotes = notes.filter(note => note.id !== id)
     setNotes(newNotes)
   }
 
+  const breakpoints = {
+    default: 3,
+    1100: 2,
+    700: 1
+  }
 
   return (  
     <Container>
-      <Grid container spacing={3}>
+      <Masonry
+        breakpointCols={breakpoints}
+        className="my-masonry-grid"
+        columnClassName="my-masonry-grid_column">
+
         {notes.map(note => (
-          <Grid item key={note.id} xs={12} md={6} lg={4}>
+          <div item key={note.id} xs={12} md={6} lg={4}>
             <Card note={note} handleDelete={handleDelete}/>
-          </Grid>        
+          </div>        
         ))}
-      </Grid>
+
+      </Masonry>
     </Container>
   );
 }

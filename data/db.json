@@ -1,16 +1,40 @@
 {
   "notes": [
     {
-      "title": "Yoshi's birthday bash",
-      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-      "category": "reminders",
-      "id": 1
-    },
-    {
       "title": "Order a pizza!",
       "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
       "category": "todos",
       "id": 3
+    },
+    {
+      "title": "test",
+      "details": "Let's see if works or not !!\n",
+      "category": "work",
+      "id": 4
+    },
+    {
+      "title": "random post",
+      "details": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      "category": "reminders",
+      "id": 5
+    },
+    {
+      "title": "Money Conversion",
+      "details": "Ind ruppees to USD \n75RS = 1D",
+      "category": "money",
+      "id": 6
+    },
+    {
+      "title": "2nd post",
+      "details": "Let's see how it works !",
+      "category": "work",
+      "id": 7
+    },
+    {
+      "title": "random post",
+      "details": "lets see it works or not ?\nif it does then my react+ material project would be complete !",
+      "category": "notes",
+      "id": 8
     }
   ]
 }

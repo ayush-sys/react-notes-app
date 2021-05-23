@@ -26,7 +26,7 @@ const Create = () => {
   const [details,setDetails] = useState('')
   const [titleError,setTitleError] = useState(false)
   const [detailsError,setDetailsError] = useState(false)
-  const [category,setCategory] = useState('todos')
+  const [category,setCategory] = useState('notes')
 
 
   const handleSubmit = (e) => {
@@ -34,10 +34,10 @@ const Create = () => {
     setTitleError(false)
     setDetailsError(false)
 
-    if(title == '')
+    if(title === '')
       setTitleError(true)
     
-    if(details == '')
+    if(details === '')
       setDetailsError(true)
 
     if(title && details){
@@ -77,6 +77,7 @@ const Create = () => {
         <FormLabel>Note Category</FormLabel>
         <RadioGroup value={category} onChange={(e) => setCategory(e.target.value)}>
           <FormControlLabel control={<Radio />} label='Money' value='money' />
+          <FormControlLabel control={<Radio />} label='Notes' value='notes' />
           <FormControlLabel control={<Radio />} label='To-do' value='todos'/>
           <FormControlLabel control={<Radio />} label='Reminders' value='reminders' />
           <FormControlLabel control={<Radio />} label='Work' value='work' />
