@@ -7,6 +7,7 @@ import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 import TextField from '@material-ui/core/TextField'
 import RadioGroup from '@material-ui/core/RadioGroup'
 import Radio from '@material-ui/core/Radio'
+import { useHistory } from 'react-router';
 
 
 const useStyles = makeStyles({
@@ -20,7 +21,7 @@ const useStyles = makeStyles({
 const Create = () => {
 
   const classes = useStyles()
-
+  const history = useHistory()
   const [title,setTitle] = useState('')
   const [details,setDetails] = useState('')
   const [titleError,setTitleError] = useState(false)
@@ -40,9 +41,11 @@ const Create = () => {
       setDetailsError(true)
 
     if(title && details){
-      console.log("Title: ",title)
-      console.log("Deatils: ",details)
-      console.log("Category: ",category)
+      fetch('http://localhost:3004/notes',{
+        method: 'POST',
+        headers: {'Content-type':'application/json'},
+        body:JSON.stringify({title,details,category})
+      }).then(() => history.push('/'))
     }
   }
   
